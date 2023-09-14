@@ -1,7 +1,7 @@
 
 
 def lambda_handler(event, context):
-    f = open('index       hi.html', 'r')
+    f = open('index     asdas  hi.html', 'r')
     html = f.read()
     f.close()    
 
