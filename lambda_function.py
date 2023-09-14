@@ -1,9 +1,9 @@
 
 
 def lambda_handler(event, context):
-    f = open('index.html', 'r')
+    f = open('index     asdas  hi.html', 'r')
     html = f.read()
-    f.close()
+    f.close()    
 
     return {
         'statusCode': 200,
