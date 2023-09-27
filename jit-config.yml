@@ -1,0 +1,7 @@
+folders:
+  - path: /repo1
+  - path: /repo2
+    exclude:
+      - /src/infra/*
+  - path: /repo3
+  - path: /repo4
