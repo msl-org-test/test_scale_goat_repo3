@@ -9,3 +9,12 @@ Sentry.init({
   dsn: 'https://34272539600044d894552d62c814f98a@o409427.ingest.sentry.io/5340604',
   integrations: [new MyAwesomeIntegration()]
 });
+
+document.getElementById('userForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // This is an unsafe practice and can lead to XSS vulnerabilities
+  const userInput = document.getElementById('userInput').value;
+  document.getElementById('content').innerHTML = userInput;
+});
+
