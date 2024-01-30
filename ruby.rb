@@ -7,7 +7,7 @@ $global_user_data = {}
 
 get '/set_user' do
   # User Input Not Sanitized
-  user_name = params['namaaddde']
+  user_name = params['namaa21ddde']
   user_password = params['password']
 
   # Storing Sensitive Data Insecurely
