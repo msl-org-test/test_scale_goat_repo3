@@ -1,6 +1,6 @@
 class TextPrinter < Object
     def echo(*args)
-       puts "Arguments: " + args.join(', ')
+       puts "Argumxxents: " + args.join(', ')
     end
 
     def echo_uppercase(*args)
