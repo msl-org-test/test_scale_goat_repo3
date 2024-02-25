@@ -43,7 +43,8 @@ module.exports = cache => (req, res) => {
             ).then(data => {
                 const mrssXml = createMrssXml(data, ptt, host);
                 const encodedXml = escapeXML(mrssXml);
-                res.send(formatMrssXml(encodedXml, host));
+                const sanitizedData = sanitizeAndEncode(encodedXml)
+                res.send(formatMrssXml(sanitizedData, host));
             });
         });
     });
