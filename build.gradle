@@ -1,0 +1,46 @@
+plugins {
+  id('idea')
+  id('io.ebean') version '13.11.0'
+  id('org.jetbrains.kotlin.jvm') version '1.8.0'
+  id('org.jetbrains.kotlin.kapt') version '1.8.0'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+
+  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0'
+  implementation 'org.avaje.composite:logback:1.1'
+
+  implementation 'io.ebean:ebean:13.11.0'
+  implementation 'org.postgresql:postgresql:42.5.1'
+
+  kapt 'io.ebean:kotlin-querybean-generator:13.11.0'
+
+  testImplementation 'io.ebean:ebean-test:13.11.0'
+  testImplementation 'io.avaje:junit:1.1'
+}
+
+test {
+  useJUnitPlatform()
+}
+
+compileKotlin {
+  kotlinOptions.jvmTarget = '11'
+}
+
+compileTestKotlin {
+  kotlinOptions.jvmTarget = '11'
+}
+
+ebean {
+  debugLevel = 1
+}
+
+test {
+  testLogging.showStandardStreams = true
+  testLogging.exceptionFormat = 'full'
+}
