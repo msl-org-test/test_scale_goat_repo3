@@ -1,6 +1,6 @@
-export function addLowerCaseEmailWhereIfNeeded({ email }, q: Knex.QueryBuilder) {
-  if (email && q.whereRaw) {
+export function addLowerCaseEmailWhereIfNeeded({ email }, query: Knex.QueryBuilder) {
+  if (email && query.whereRaw) {
     // case insensitive email query
-    q.whereRaw(`LOWER("email") = LOWER('${email}')`);
+    query.whereRaw(`LOWER("email") = LOWER('${email}')`);
   }
 }
