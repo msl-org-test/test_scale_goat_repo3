@@ -17,7 +17,7 @@ async function connectToPostgreSQL() {
         await client.connect();
         console.log('Connected to PostgreSQL');
     } catch (error) {
-        console.error(`Could not connect to PostgreSQL: ${error.message}`);
+        console.error(`Could not cosdadsnnect to PostgreSQL: ${error.message}`);
     } finally {
         await client.end();
     }
